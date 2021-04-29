@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\magnu\\Desktop\\webutvikling2_eksamen\\FindAMusicianAPI\\FindAMusicianAPI.csproj": {}
+    "/Users/pettersvarvewibstad/E-Business-Lokal/Webutvikling 2/Eksamen/FindAMusicianAPI/FindAMusicianAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\magnu\\Desktop\\webutvikling2_eksamen\\FindAMusicianAPI\\FindAMusicianAPI.csproj": {
+    "/Users/pettersvarvewibstad/E-Business-Lokal/Webutvikling 2/Eksamen/FindAMusicianAPI/FindAMusicianAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\magnu\\Desktop\\webutvikling2_eksamen\\FindAMusicianAPI\\FindAMusicianAPI.csproj",
+        "projectUniqueName": "/Users/pettersvarvewibstad/E-Business-Lokal/Webutvikling 2/Eksamen/FindAMusicianAPI/FindAMusicianAPI.csproj",
         "projectName": "FindAMusicianAPI",
-        "projectPath": "C:\\Users\\magnu\\Desktop\\webutvikling2_eksamen\\FindAMusicianAPI\\FindAMusicianAPI.csproj",
-        "packagesPath": "C:\\Users\\magnu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\magnu\\Desktop\\webutvikling2_eksamen\\FindAMusicianAPI\\obj\\",
+        "projectPath": "/Users/pettersvarvewibstad/E-Business-Lokal/Webutvikling 2/Eksamen/FindAMusicianAPI/FindAMusicianAPI.csproj",
+        "packagesPath": "/Users/pettersvarvewibstad/.nuget/packages/",
+        "outputPath": "/Users/pettersvarvewibstad/E-Business-Lokal/Webutvikling 2/Eksamen/FindAMusicianAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\magnu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/pettersvarvewibstad/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -38,6 +38,12 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[5.0.5, )"
@@ -65,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.200/RuntimeIdentifierGraph.json"
         }
       }
     }

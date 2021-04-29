@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace FindAMusician.Models {
+namespace FindAMusicianAPI.Models {
     public class Artist {
         [Key]
         public int ArtistID { get; set; }
@@ -14,7 +14,6 @@ namespace FindAMusician.Models {
         public IList<ArtistMusicanType> ArtistMusicanType { get; set; }
     }
     public class ArtistMusicanType {
-        [Key]
         public int ArtistID { get; set; }
         public Artist Artist { get; set; }
         public int MusicanTypeID { get; set; }
@@ -22,9 +21,8 @@ namespace FindAMusician.Models {
     }
 
     public class MusicanType {
-        [Key]
         public int MusicanTypeID { get; set; }
-        public int Type { get; set; }
+        public string Type { get; set; }
         public IList<ArtistMusicanType> ArtistMusicanType { get; set; }
     } 
 }

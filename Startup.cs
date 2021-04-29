@@ -12,6 +12,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using FindAMusicianAPI.Models;
+
 namespace FindAMusicianAPI
 {
     public class Startup
@@ -26,7 +30,7 @@ namespace FindAMusicianAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddDbContext<ArtistContext>(options => options.UseSqlite("Data Source=artist.db"));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
