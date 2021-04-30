@@ -30,7 +30,7 @@ namespace FindAMusicianAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ArtistContext>(options => options.UseSqlite("Data Source=artist.db"));
+            services.AddDbContext<FindAMusicanContext>(options => options.UseSqlite("Data Source=FindAMusican.db"));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -47,6 +47,8 @@ namespace FindAMusicianAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "FindAMusicianAPI v1"));
             }
+
+            app.UseStaticFiles();
 
             app.UseHttpsRedirection();
 

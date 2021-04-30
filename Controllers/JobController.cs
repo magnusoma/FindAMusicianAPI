@@ -8,19 +8,19 @@ namespace FindAMusicianAPI.Controllers {
 
     [ApiController]
     [Route("[controller]")]
-    public class ArtistController : ControllerBase {
+    public class JobController : ControllerBase {
         
         private readonly FindAMusicanContext _context;
 
-        public ArtistController(FindAMusicanContext context) {
+        public JobController(FindAMusicanContext context) {
             _context = context;
         }
         
         [HttpGet]
-        public async Task<IEnumerable<Artist>> GetArtistList() {
-            List<Artist> artistlist = await _context.Artist.ToListAsync();
+        public async Task<IEnumerable<Job>> JobList() {
+            List<Job> Joblist = await _context.Job.ToListAsync();
 
-            return artistlist;
+            return Joblist;
         }
         
 
