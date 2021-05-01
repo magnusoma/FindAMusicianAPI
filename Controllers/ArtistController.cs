@@ -59,6 +59,21 @@ namespace FindAMusicianAPI.Controllers {
             using (var filestream = new FileStream(absolutepath, FileMode.Create)) { file.CopyTo(filestream); }
         }
         
+        [HttpPut]
+        public async Task<Artist> Put(Artist Artist) {
+            _context.Update(Artist);
+            await _context.SaveChangesAsync();
+            return Artist;
+        }
 
+        [HttpDelete("{id}")]
+        public async Task<Artist> Delete(int id) {
+            Artist ArtistToDelete = await _context.Artist.FirstAsync( artist => artist.ArtistId == id );
+            _context.Artist.Remove(ArtistToDelete);
+            await _context.SaveChangesAsync();
+            return ArtistToDelete;
+        }
+
+    
     }
 }
