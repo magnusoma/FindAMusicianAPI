@@ -12,6 +12,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using FindAMusicianAPI.Models;
+
 namespace FindAMusicianAPI
 {
     public class Startup
@@ -26,7 +30,18 @@ namespace FindAMusicianAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(
+                options => {
+                    options.AddPolicy("AllowAnyOrigin",
+                        builder => builder
+                            .AllowAnyHeader()
+                            .AllowAnyMethod()
+                            .AllowAnyOrigin()
+                    );
+                }
+            );
 
+            services.AddDbContext<FindAMusicanContext>(options => options.UseSqlite("Data Source=FindAMusican.db"));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -43,6 +58,10 @@ namespace FindAMusicianAPI
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "FindAMusicianAPI v1"));
             }
+
+            app.UseStaticFiles();
+
+            app.UseCors("AllowAnyOrigin");
 
             app.UseHttpsRedirection();
 
