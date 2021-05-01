@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace FindAMusicianAPI.Models {
@@ -15,6 +16,7 @@ namespace FindAMusicianAPI.Models {
         public string Genre { get; set; }
         public string Price { get; set; }
         public string JobAddress { get; set; }
+        public DateTime date { get; set; }
         public bool isFinished { get; set; }
     }
 }
