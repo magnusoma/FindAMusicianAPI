@@ -32,7 +32,7 @@ namespace FindAMusicianAPI.Controllers {
         [Route("[action]/{name}")]
         public async Task<IEnumerable<Job>> GetByName(string name) {
             List<Job> JobList = await _context.Job
-                .Where( a => a.JobName.ToLower()
+                .Where( a => a.CustomerLastName.ToLower()
                 .Contains(name.ToLower()) )
                 .ToListAsync();
             return JobList;
