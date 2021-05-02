@@ -3,14 +3,16 @@ using System;
 using FindAMusicianAPI.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FindAMusicianAPI.Migrations
 {
     [DbContext(typeof(FindAMusicanContext))]
-    partial class FindAMusicanContextModelSnapshot : ModelSnapshot
+    [Migration("20210502164927_addedjobaddress")]
+    partial class addedjobaddress
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
