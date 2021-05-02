@@ -16,7 +16,7 @@ namespace FindAMusicianAPI.Models {
         public string Price { get; set; }
         public string EventType { get; set; }
         public string JobAddress { get; set; }
-        public DateTime date { get; set; }
+        public string date { get; set; }
         public bool isFinished { get; set; }
     }
 }
