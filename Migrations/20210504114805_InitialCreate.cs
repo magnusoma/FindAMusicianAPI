@@ -10,7 +10,7 @@ namespace FindAMusicianAPI.Migrations
                 name: "Artist",
                 columns: table => new
                 {
-                    ArtistID = table.Column<int>(type: "INTEGER", nullable: false)
+                    ArtistId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     ArtistName = table.Column<string>(type: "TEXT", nullable: true),
                     Price = table.Column<double>(type: "REAL", nullable: false),
@@ -22,16 +22,15 @@ namespace FindAMusicianAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Artist", x => x.ArtistID);
+                    table.PrimaryKey("PK_Artist", x => x.ArtistId);
                 });
 
             migrationBuilder.CreateTable(
-                name: "MusicanType",
+                name: "Job",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    JobName = table.Column<string>(type: "TEXT", nullable: true),
                     CustomerFirstName = table.Column<string>(type: "TEXT", nullable: true),
                     CustomerLastName = table.Column<string>(type: "TEXT", nullable: true),
                     CustomerTlf = table.Column<string>(type: "TEXT", nullable: true),
@@ -39,12 +38,14 @@ namespace FindAMusicianAPI.Migrations
                     Description = table.Column<string>(type: "TEXT", nullable: true),
                     Genre = table.Column<string>(type: "TEXT", nullable: true),
                     Price = table.Column<string>(type: "TEXT", nullable: true),
+                    EventType = table.Column<string>(type: "TEXT", nullable: true),
                     JobAddress = table.Column<string>(type: "TEXT", nullable: true),
+                    date = table.Column<string>(type: "TEXT", nullable: true),
                     isFinished = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MusicanType", x => x.Id);
+                    table.PrimaryKey("PK_Job", x => x.Id);
                 });
         }
 
@@ -54,7 +55,7 @@ namespace FindAMusicianAPI.Migrations
                 name: "Artist");
 
             migrationBuilder.DropTable(
-                name: "MusicanType");
+                name: "Job");
         }
     }
 }

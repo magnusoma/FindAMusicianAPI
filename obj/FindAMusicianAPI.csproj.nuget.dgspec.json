@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/pettersvarvewibstad/E-Business-Lokal/Webutvikling 2/Eksamen/FindAMusicianAPI/FindAMusicianAPI.csproj": {}
+    "C:\\Users\\marti\\Documents\\GitHub\\FindAMusicianAPI\\FindAMusicianAPI.csproj": {}
   },
   "projects": {
-    "/Users/pettersvarvewibstad/E-Business-Lokal/Webutvikling 2/Eksamen/FindAMusicianAPI/FindAMusicianAPI.csproj": {
+    "C:\\Users\\marti\\Documents\\GitHub\\FindAMusicianAPI\\FindAMusicianAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/pettersvarvewibstad/E-Business-Lokal/Webutvikling 2/Eksamen/FindAMusicianAPI/FindAMusicianAPI.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\Documents\\GitHub\\FindAMusicianAPI\\FindAMusicianAPI.csproj",
         "projectName": "FindAMusicianAPI",
-        "projectPath": "/Users/pettersvarvewibstad/E-Business-Lokal/Webutvikling 2/Eksamen/FindAMusicianAPI/FindAMusicianAPI.csproj",
-        "packagesPath": "/Users/pettersvarvewibstad/.nuget/packages/",
-        "outputPath": "/Users/pettersvarvewibstad/E-Business-Lokal/Webutvikling 2/Eksamen/FindAMusicianAPI/obj/",
+        "projectPath": "C:\\Users\\marti\\Documents\\GitHub\\FindAMusicianAPI\\FindAMusicianAPI.csproj",
+        "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marti\\Documents\\GitHub\\FindAMusicianAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/pettersvarvewibstad/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.200/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
