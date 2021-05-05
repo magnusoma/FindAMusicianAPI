@@ -37,6 +37,20 @@ namespace FindAMusicianAPI.Controllers {
                 .ToListAsync();
             return JobList;
         }
+        [HttpPut]
+        public async Task<Job> Put(Job job) {
+            _context.Update(job);
+            await _context.SaveChangesAsync();
+            return job;
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<Job> Delete(int id) {
+            Job JobToDelete = await _context.Job.FirstAsync( job => job.Id == id );
+            _context.Job.Remove(JobToDelete);
+            await _context.SaveChangesAsync();
+            return JobToDelete;
+        }
 
         [HttpPost]
         public async Task<Job> Post( Job newJob) {
