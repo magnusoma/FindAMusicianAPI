@@ -55,7 +55,7 @@ namespace FindAMusicianAPI.Controllers {
         [Route("[action]")]
         public void SaveImage(IFormFile file) {
             string webrootpath = _hosting.WebRootPath;
-            string absolutepath = Path.Combine($"{webrootpath}/images/{file.FileName}");
+            string absolutepath = Path.Combine($"{webrootpath}/images/artist_images/{file.FileName}");
             using (var filestream = new FileStream(absolutepath, FileMode.Create)) { file.CopyTo(filestream); }
         }
         
